@@ -1,0 +1,21 @@
+F:\RRSServices\RRSServices\bin\RRSServices.dll
+F:\RRSServices\RRSServices\bin\RRSServices.pdb
+F:\RRSServices\RRSServices\bin\RRSBLL.dll
+F:\RRSServices\RRSServices\bin\RRSBOL.dll
+F:\RRSServices\RRSServices\bin\RRSDAL.dll
+F:\RRSServices\RRSServices\bin\RRSBLL.pdb
+F:\RRSServices\RRSServices\bin\RRSBOL.pdb
+F:\RRSServices\RRSServices\bin\RRSDAL.pdb
+F:\RRSServices\RRSServices\obj\Debug\RRSServices.dll
+F:\RRSServices\RRSServices\obj\Debug\RRSServices.pdb
+F:\RRSServices\RRSServices\obj\Debug\RRSServices.csprojResolveAssemblyReference.cache
+F:\Live Project\RRSServices\RRSServices\bin\RRSServices.dll
+F:\Live Project\RRSServices\RRSServices\bin\RRSServices.pdb
+F:\Live Project\RRSServices\RRSServices\bin\RRSBLL.dll
+F:\Live Project\RRSServices\RRSServices\bin\RRSBOL.dll
+F:\Live Project\RRSServices\RRSServices\bin\RRSDAL.dll
+F:\Live Project\RRSServices\RRSServices\bin\RRSBLL.pdb
+F:\Live Project\RRSServices\RRSServices\bin\RRSBOL.pdb
+F:\Live Project\RRSServices\RRSServices\bin\RRSDAL.pdb
+F:\Live Project\RRSServices\RRSServices\obj\Debug\RRSServices.dll
+F:\Live Project\RRSServices\RRSServices\obj\Debug\RRSServices.pdb

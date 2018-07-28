@@ -1,0 +1,8 @@
+F:\Live Project\RRSDAL\bin\Debug\RRSDAL.dll.config
+F:\Live Project\RRSDAL\bin\Debug\RRSDAL.dll
+F:\Live Project\RRSDAL\bin\Debug\RRSDAL.pdb
+F:\Live Project\RRSDAL\bin\Debug\RRSBOL.dll
+F:\Live Project\RRSDAL\bin\Debug\RRSBOL.pdb
+F:\Live Project\RRSDAL\obj\Debug\RRSDAL.csprojResolveAssemblyReference.cache
+F:\Live Project\RRSDAL\obj\Debug\RRSDAL.dll
+F:\Live Project\RRSDAL\obj\Debug\RRSDAL.pdb

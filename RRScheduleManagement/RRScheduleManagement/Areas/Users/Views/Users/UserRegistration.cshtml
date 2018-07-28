@@ -1,0 +1,166 @@
+﻿    @model RRSBOL.Users
+@{
+ViewBag.Title = "UserRegistration";
+Layout = "~/Areas/Users/Views/Shared/_UserLayout.cshtml";
+}
+<h2>User Registration: @ViewBag.message </h2>
+<link href="~/css/jquery-ui.css" rel="stylesheet" />
+<link href="~/css/color.css" rel="stylesheet" />
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script>
+    //$(document).ready(function() {
+    //    $('#btnSubmit').click(function () {
+    //        var strError = [];
+    //        var userDetails = new Object();
+    //        userDetails.Email = $('#txtEmail').val();
+    //        userDetails.Email
+    //        if (userDetails.Email == "") {
+    //            strError.Email = "The Email field can not be empty <br/>";
+    //        }
+    //        else {
+    //            strError.Email = "";
+    //         }
+    //        //Password related logic
+    //        userDetails.Password = $('#txtPassword').val();
+    //        if (userDetails.Password == "") {
+    //            strError.Password = "The Password field can not be empty <br>";
+    //        } else {
+    //            strError.Password = "";
+    //        }
+    //        Confirm password related logic
+    //        userDetails.ConfirmPassword = $('#txtConfirmPassword').val();
+    //        if (userDetails.Password != userDetails.ConfirmPassword) {
+    //            strError.CPassword = "Passwords do not match. <br>";
+    //        } else {
+    //            strError.CPassword = "";
+    //        }
+    //        Firstname related logic
+    //        userDetails.Firstname = $('#txtFirstname').val();
+    //        if (userDetails.Firstname == "") {
+    //            strError.Firstname = "The First name field also a required field <br/>";
+    //        } else {
+    //            strError.Firstname = "";
+    //        }
+    //        //Lastname related logic
+    //        userDetails.Lastname = $('#txtLastname').val();
+    //        if (userDetails.Lastname == "") {
+    //            strError.Lastname = "The Last name field also a required field <br/>";
+    //        } else {
+    //            strError.Lastname = "";
+    //        }
+    //        userDetails.IsRole = $('#txtIsRole').val();
+    //        userDetails.UserImage = $('#txtUserImage').val();
+    //        if (strError[0] != "") {
+    //            $("#divResult").html(strError.Email + "  " + strError.Password + " " + strError.CPassword + " " + strError.Firstname + " " + strError.Lastname);
+    //        } else {
+    //            if (employee != null) {
+    //                $.ajax({
+    //                    type: "POST",
+    //                    url: "/JQueryAjaxCall/AjaxPostCall",
+    //                    data: JSON.stringify(userDetails),
+    //                    contentType: "application/json; charset=utf-8",
+    //                    dataType: "json",
+    //                    success: function(response) {
+    //                        if (response != null) {
+    //                            alert("Email : " + response.Email + ", Password : " + response.Password + ", Firstname :" + response.Firstname + ", Lastname :" + response.Lastname);
+    //                        } else {
+    //                            alert("Something went wrong");
+    //                        }
+    //                    },
+    //                    failure: function(response) {
+    //                        alert(response.responseText);
+    //                    },
+    //                    error: function(response) {
+    //                        alert(response.responseText);
+    //                    }
+    //                });
+    //            }
+    //      }
+    //    });
+    //});
+
+</script>
+<style>
+   body {
+   background: #edf1f4 url(bg.jpg);
+   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans serif;
+   font-size: 16px;
+   padding-left:50px;
+   color: #444;
+   }
+   ul,
+   li {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   }
+    .widthF {
+    width:10%;
+          }
+     .widthS {
+    width:50%;
+          }
+    .btn-large {
+        width:17.5%;
+    }
+</style>
+@using (Html.BeginForm()) {
+@Html.ValidationSummary(true)
+<table class="table" stype="width:50%">
+   <tr>
+      <td class="widthF">@Html.LabelFor(model => model.Email)</td>
+      <td class="widthS">@Html.TextBoxFor(model => model.Email , new { @class = "form-control", id = "txtEmail" }  )
+      </td>
+      <td>@Html.ValidationMessageFor(model => model.Email)</td>
+   </tr>
+   <tr>
+      <td>@Html.LabelFor(model => model.Password)</td>
+      <td>@Html.TextBoxFor(model => model.Password, new { @class = "form-control", @id="txtPassword"})</td>
+      <td> @Html.ValidationMessageFor(model => model.Password)
+      </td>
+   </tr>
+   <tr>
+      <td>@Html.LabelFor(model => model.ConfirmPassword)</td>
+      <td>@Html.TextBoxFor(model => model.ConfirmPassword, new { @class = "form-control", @id="txtPassword"})</td>
+      <td>@Html.ValidationMessageFor(model => model.ConfirmPassword)
+      </td>
+   </tr>
+   <tr>
+      <td>@Html.LabelFor(model => model.Firstname)</td>
+      <td>@Html.TextBoxFor(model => model.Firstname, new { @class = "form-control", @id="txtFirstname"})</td>
+      <td>@Html.ValidationMessageFor(model => model.Firstname) </td>
+   </tr>
+   <tr>
+      <td>@Html.LabelFor(model => model.Lastname)
+      </td><td>@Html.TextBoxFor(model => model.Lastname, new {  @class = "form-control", @id="txtLastname"})
+      </td><td>@Html.ValidationMessageFor(model => model.Lastname)</td>
+   </tr>
+   <tr>
+      <td>  @Html.LabelFor(model => model.Gender)
+      </td>
+      <td>  @Html.TextBoxFor(model => model.Gender, new { @class = "form-control", @id="txtGender"})
+      </td>
+      <td>@Html.ValidationMessageFor(model => model.Gender)
+      </td>
+   </tr>
+   <tr>
+      <td>  @Html.LabelFor(model => model.UserImage)
+      </td>
+      <td>  @Html.TextBoxFor(model => model.UserImage, new {  @class = "form-control", @id="txtUserImage"})
+      </td>
+      <td> @Html.ValidationMessageFor(model => model.UserImage)
+      </td>
+   </tr>
+</table>
+<p>
+   <input type="submit" id="btnSubmit" class="btn btn-primary btn-large" value="Create" />
+   <input type="button" id="btnReset" class="btn btn-secondry btn-large" value="Create" />
+   <input type="button" id="btnCancel" class="btn btn-danger btn-large" value="Create" />
+
+</p>
+<div id="divResult"></div>
+}
+<div>
+   @Html.ActionLink("Back to List", "UsersList", "Users", "")
+</div>

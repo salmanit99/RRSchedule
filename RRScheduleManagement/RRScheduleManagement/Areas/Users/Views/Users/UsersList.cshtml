@@ -1,0 +1,131 @@
+﻿@model IEnumerable<RRSBOL.Users>
+
+@{
+    ViewBag.Title = "UsersList";
+    Layout = "~/Areas/Users/Views/Shared/_UserLayout.cshtml";
+}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="~/Scripts/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/Scripts/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="~/Scripts/DataTables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="~/Scripts/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    
+   <script src="~/Scripts/bootstrap.min.js"></script>
+@*<script src="~/Scripts/jquery-1.7.1.min.js"></script>*@
+<script src="~/Scripts/jquery-library.js"></script>
+<script src="~/Scripts/DataTables/js/dataTables.bootstrap.min.js"></script>
+<script src="~/Scripts/DataTables/js/jquery.dataTables.min.js"></script>
+
+<script>
+$(document).ready(function () {
+    LoadData();
+});
+
+function LoadData() {
+    debugger;
+    $.ajax({       
+        type: "GET",
+        url: 'http://localhost:61140/UserService.asmx/JsonData',
+        async: false,    
+        accept: "json",
+        success: function (result) {
+            debugger;
+            var jsonData = result;
+            var a = 0;
+            $("#MyTable").DataTable({
+                "destroy": true,
+                "bInfo": true,
+                "aaData": jsonData,
+                "columns": [
+                    {
+                        "data": "Email",
+                        "bSortable": true,
+                        "visible": true,
+                        "bwidth": 40,
+
+                    },
+
+                    {
+                        "data": "Firstname",
+                        "bSortable": true,
+                        "visible": true,
+                        "bwidth": 20,
+                    },
+                    {
+                        "data": "Lastname",
+                        "bSortable": true,
+                        "visible": true,
+                        "bwidth": 20,
+                    },
+                    {
+                        "data": "Gender",
+                        "bSortable": true,
+                        "visible": true,
+                        "bwidth": 20,
+                    },
+                    {
+                        "data": "IsActive",
+                        "bSortable": true,
+                        "visible": true,
+                        "mRender": function (data, type, full) {
+                            if (data == 1) {
+                                return "Yes";
+                            }
+                            else {
+                                return "No";
+                            }
+                        }
+                    }
+                ]
+
+            });
+        }
+    });
+}
+    </script>
+<style>
+    #MyTable {
+     border-radius:inherit;
+     border:double;
+     border-bottom-left-radius:8px;
+      }
+</style>
+
+<h2>Users List</h2>
+  <div class="pull-right">
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Export To</button>
+         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Excel","ExportTo", new { ReportType="Excel"}) </li>
+            <li>@Html.ActionLink("PDF","ExportTo",new { ReportType="pdf"})</li>
+        </ul>
+     </div>
+</div>
+
+<table id="MyTable" class="table" style="width:100%; color:gray ">
+    <thead>    <tr>    
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>          
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+         <th> </th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+
+</table>

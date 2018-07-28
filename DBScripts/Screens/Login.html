@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Enter Your Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email address here..." name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Enter Your Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password here..." name="pswd">
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a id="myBtn" Id="myBtn">Sign Up</a>
+            </div>
+            <div class="form-group">
+
+                <a id="myResetbtn">Forgot Password</a>
+            </div>
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Sign Up Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Welcome to RRS Management</h4>
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+
+                        <!-- Sign Up Modal body -->
+                        <div class="modal-body">
+                            <div class="container">
+                                <p>Please fill in this form to create an account.</p>
+                                <hr>
+                                <div class="form-group">
+                                    <label for="email"><b>Email</b></label>
+                                    <input type="text" placeholder="Enter Email" name="email" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="psw"><b>Password</b></label>
+                                    <input type="password" placeholder="Enter Password" name="psw" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                                    <input type="password" placeholder="Repeat Password" name="psw-repeat" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="txtFirstname"><b>Enter Firstname</b></label>
+                                    <input type="textbox" placeholder="Enter Your Firstname" name="txtFirstname" class="form-control" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="txtLastname"><b>Enter Lastname</b></label>
+                                    <input type="textbox" placeholder="Enter Your Lastname" name="txtLastname" class="form-control" required>
+                                </div>
+
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me </label>
+                                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                            </div>
+
+                        </div>
+                        <!-- Sign Up Modal footer -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Sign Up</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal" id="myResetModel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Forget Password Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Forgot Password?</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Forget Password  Modal body -->
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="text-left">
+                                        <p>No one from RRS Management will ever call you and ask you to change your password. Never share you CVV, PIN, OTP or Password with anyone, even if the caller claims to be a RRS Management employee. Using these details anyone can take away all your data from your RRS account.<br><br> If you have forgotten your password - reset it here.
+                                        </p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <form class="form">
+                                            <fieldset>
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                                                        <input id="emailInput" placeholder="email address" class="form-control" type="email" required="">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Forget Password Modal footer -->
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <input class="btn btn-primary" value="Send My Password" type="submit">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#myBtn").click(function() {
+                $("#myModal").modal();
+            });
+
+            $("#myResetbtn").click(function() {
+                $("#myResetModel").modal();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
