@@ -3,6 +3,7 @@ $(document).ready(function () {
     LoadData();
 });
 
+
 function LoadData() {
     debugger;
     $.ajax({
@@ -63,4 +64,29 @@ function LoadData() {
             });
         }
     });
+}
+
+
+function ShowRegistrationModal()
+{
+    $("[id$=UserRegistrationModal]").modal("show");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function ShowForgetPasswordModal() {
+
+    $("[id$=txtForgetPassEmail]").val($("[id$=txtEmail]").val());
+
+    $("[id$=ForgetPasswordModal]").modal("show");
+
 }

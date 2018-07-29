@@ -10,9 +10,9 @@ namespace RRSBOL
 {
     public class UserLogin
     {
-        [Required(AllowEmptyStrings = false, ErrorMessage = "This is a requird field")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Email id is a requird field")]
         [DataType(DataType.EmailAddress)]
-        [Remote("CheckExistingEmail", "Users", "Users", HttpMethod = "Post", ErrorMessage = "Email Address is already exist")]
+        [Remote("isEmailExist", "Users", "Users", HttpMethod = "Post", ErrorMessage = "Email Address is already exist")]
         public string Email { set; get; }
 
         [Required(AllowEmptyStrings = false, ErrorMessage = "Password field is required")]

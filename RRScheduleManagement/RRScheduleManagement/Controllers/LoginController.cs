@@ -33,7 +33,8 @@ namespace RRScheduleManagement.Controllers
                         return Redirect("Users/Users/UserRegistration");
                     }
                 }
-                return View("Login");
+
+                return View("UserLogin");
             }
         }
 

@@ -16,3 +16,12 @@ F:\Live Project\RRSBLL\bin\Debug\RRSDAL.pdb
 F:\Live Project\RRSBLL\obj\Debug\RRSBLL.csprojResolveAssemblyReference.cache
 F:\Live Project\RRSBLL\obj\Debug\RRSBLL.dll
 F:\Live Project\RRSBLL\obj\Debug\RRSBLL.pdb
+E:\Live Project\RRSchedule\RRSBLL\bin\Debug\RRSBLL.dll
+E:\Live Project\RRSchedule\RRSBLL\bin\Debug\RRSBLL.pdb
+E:\Live Project\RRSchedule\RRSBLL\bin\Debug\RRSBOL.dll
+E:\Live Project\RRSchedule\RRSBLL\bin\Debug\RRSDAL.dll
+E:\Live Project\RRSchedule\RRSBLL\bin\Debug\RRSBOL.pdb
+E:\Live Project\RRSchedule\RRSBLL\bin\Debug\RRSDAL.pdb
+E:\Live Project\RRSchedule\RRSBLL\obj\Debug\RRSBLL.csprojResolveAssemblyReference.cache
+E:\Live Project\RRSchedule\RRSBLL\obj\Debug\RRSBLL.dll
+E:\Live Project\RRSchedule\RRSBLL\obj\Debug\RRSBLL.pdb
